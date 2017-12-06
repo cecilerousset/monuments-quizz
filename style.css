@@ -1,0 +1,91 @@
+@keyframes animation_from_bottom {
+    from {
+        opacity: 0;
+        transform: translate(0px, 100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+body {
+    background-color: grey;
+    margin :100px;
+}
+
+#site-title {
+    text-align: center;
+}
+
+#monuments {
+    display: flex;
+    flex-direction: row;
+    border-left: 0px;
+    justify-content: center;
+}
+
+.picture{
+    transform: scale(0.6, 0.6);
+    margin: -75px;
+    margin-top: 75px;
+}
+
+
+
+
+
+.valide-modal {
+    position: absolute;
+    left: 320px;
+    top: -55px;
+    transform: scale(0.3, 0.3);
+    animation-name: animation_from_bottom;
+    animation-duration: 1.5s;
+	//visibility: hidden;
+}
+
+.modal-content h3 {
+	text-align: center;
+    padding-bottom: 290px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.modal-content{
+	position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+	overflow: auto;
+	//visibility: hidden;
+}
+
+//.modal-content-visible{
+//    visibility: visible; !important
+//}
+
+.modal-content>div {
+	background: white;
+	border-radius: 10px;
+	padding: 15px;
+	width: 400px;
+    height: 390px;
+	animation-name: animation_from_bottom;
+    animation-duration: 1.5s;
+	margin: auto;
+	margin-top: 160px;
+}
+
+.modal-content p{
+	text-align: center;
+}
+
+.modal-content img{
+    transform: scale(0.3, 0.3);
+}
