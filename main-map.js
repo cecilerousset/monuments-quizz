@@ -1,27 +1,65 @@
-var map;
-function initMap(){
-    map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 2,
-        center: new google.maps.LatLng(2.8,-187.3),
-        mapTypeId: 'terrain'
-    });
+// The JSON data
+var json = [
+	{"id":1,"title":"Angkor Wat", "latitude":"13.412500", "longitude":"103.866667"},
+	{"id":2,"title":"Taj-Mahal", "latitude":"27.175", "longitude":"78.041944"}
+];
 
-    var script = document.createElement('script');
-    // This example uses a local copy of the GeoJSON stored at
-    // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-    script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-    document.getElementsByTagName('head')[0].appendChild(script);
-}
+var map = [
+	{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]}
+];
+var monument = document.getElementById('footer');
 
-// Loop through the results array and place a marker for each
-// set of coordinates.
-window.eqfeed_callback = function(results) {
-    for (var i = 0; i < results.features.length; i++) {
-        var coords = results.features[i].geometry.coordinates;
-        var latLng = new google.maps.LatLng(coords[1],coords[0]);
-        var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
+
+function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 2,
+		center: new google.maps.LatLng(0.785020, 0.274128)
+	});
+	for(var i = 1; i < json.length; i++) {
+		var obj = json[i];
+		var Zone1 = new google.maps.Circle({
+			map: map,
+            strokeWeight: 0,
+            fillOpacity: 0,
+			center: new google.maps.LatLng(obj.latitude,obj.longitude),
+			radius: 9900000,
+		});
+		var Zone2 = new google.maps.Circle({
+			map: map,
+            strokeWeight: 0,
+            fillOpacity: 0,
+			center: new google.maps.LatLng(obj.latitude,obj.longitude),
+			radius: 1500000,
+		});
+		var Zone3 = new google.maps.Circle({
+			map: map,
+            strokeWeight: 0,
+            fillOpacity: 0,
+			center: new google.maps.LatLng(obj.latitude,obj.longitude),
+			radius: 300000,
+		});
+		Zone1.addListener('click', function() {
+          alert("Tu es... sur le bon continent, mais bon...");
         });
-    }
+		Zone2.addListener('click', function() {
+          alert("C'est presque ça !");
+        });
+		Zone3.addListener('click', function() {
+			alert("Bravo, c'est ça !")
+		})
+	}
+	
 }
+
+// Load GeoJSON.
+//map.data.loadGeoJson('google.json');
+	
+/*
+Utiliser AJAX pour aller chercher mon JSon
+Ou alors le faire avec les pays
+Webdesign map
+GeoJson countries : https://github.com/johan/world.geo.json/tree/master/countries
+Data event layer : https://developers.google.com/maps/documentation/javascript/examples/layer-data-event
+
+*/
+	  
