@@ -14,8 +14,9 @@ body {
     margin :100px;
 }
 
-#site-title {
+#site-title, #question {
     text-align: center;
+    font-family: Gotham;
 }
 
 #monuments {
@@ -25,7 +26,7 @@ body {
     justify-content: center;
 }
 
-.picture{
+.picture0, .picture1, .picture2{
     transform: scale(0.6, 0.6);
     margin: -75px;
     margin-top: 75px;
@@ -34,7 +35,7 @@ body {
 
 
 
-
+/*
 .valide-modal {
     position: absolute;
     left: 320px;
@@ -88,4 +89,4 @@ body {
 
 .modal-content img{
     transform: scale(0.3, 0.3);
-}
+}*/
