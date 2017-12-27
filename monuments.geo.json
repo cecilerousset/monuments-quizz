@@ -1,0 +1,136 @@
+//eqfeed_callback(...)
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "angkor",
+        "title": "Angkor Wat",
+        "img": "img/angkor-vat1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.412500, 103.866667]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "big-ben",
+        "title": "Big Ben",
+        "img": "img/big-ben.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.5007, -0.1245]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "colisee",
+        "title": "Colosseum",
+        "img": "img/colisée-rome.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.8905, 12.4926]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "empire-state-building",
+        "title": "Empire State Building",
+        "img": "img/empire-state-building.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.748417, -73.985833]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "muraille",
+        "title": "Great Wall of China",
+        "img": "img/grande-muraille-chine.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.334720, 116.045000]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "machu-pichu",
+        "title": "Machu Picchu",
+        "img": "img/Machu-Picchu.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-13.163333, -72.545556]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "opera-sydney",
+        "title": "Sydney Opera House",
+        "img": "img/opera-sydney.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-33.858667, 151.214028]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "pyramide-gizeh",
+        "title": "Giza pyramids",
+        "img": "img/pyramide-gizeh.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.976111, 31.132778]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "taj-mahal",
+        "title": "Taj Mahal",
+        "img": "img/taj-mahal.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.175, 78.041944]
+      }
+    },
+	  
+	{
+      "type": "Feature",
+      "properties": {
+        "id": "tour-eiffel",
+        "title": "Eiffel Tower",
+        "img": "img/tour-eiffel.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [48.858222, 2.2945]
+      }
+    }
+	
+  ]
+}
