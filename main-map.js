@@ -11,8 +11,8 @@ function initMap() {
 	map.data.loadGeoJson('https://raw.githubusercontent.com/cecilerousset/monuments-quizz/map/monuments.geo.json');
 	
 	map.data.setStyle(function(feature) {
-    return {icon:'./marker-null.png'};
-  });
+    	return {visible:false};
+  	});
 	  
 	google.maps.event.addListener(map.data,'addfeature',function(e) {
          
