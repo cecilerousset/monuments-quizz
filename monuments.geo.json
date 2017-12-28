@@ -5,7 +5,7 @@
       "type": "Feature",
 	  "id": 1,
       "properties": {
-        "id": "angkor",
+        "name": "angkor",
         "title": "Angkor Wat",
         "img": "img/angkor-vat1.jpg"
       },
@@ -19,7 +19,7 @@
       "type": "Feature",
 	  "id": 2,
       "properties": {
-        "id": "big-ben",
+        "name": "big-ben",
         "title": "Big Ben",
         "img": "img/big-ben.jpg"
       },
@@ -33,7 +33,7 @@
       "type": "Feature",
 	  "id": 3,
       "properties": {
-        "id": "colisee",
+        "name": "colisee",
         "title": "Colosseum",
         "img": "img/colisée-rome.jpg"
       },
@@ -47,7 +47,7 @@
       "type": "Feature",
 	  "id": 4,
       "properties": {
-        "id": "empire-state-building",
+        "name": "empire-state-building",
         "title": "Empire State Building",
         "img": "img/empire-state-building.jpg"
       },
@@ -61,7 +61,7 @@
       "type": "Feature",
 	  "id": 5,
       "properties": {
-        "id": "muraille",
+        "name": "muraille",
         "title": "Great Wall of China",
         "img": "img/grande-muraille-chine.jpg"
       },
@@ -75,7 +75,7 @@
       "type": "Feature",
 	  "id": 6,
       "properties": {
-        "id": "machu-pichu",
+        "name": "machu-pichu",
         "title": "Machu Picchu",
         "img": "img/Machu-Picchu.jpg"
       },
@@ -89,7 +89,7 @@
       "type": "Feature",
 	  "id": 7,
       "properties": {
-        "id": "opera-sydney",
+        "name": "opera-sydney",
         "title": "Sydney Opera House",
         "img": "img/opera-sydney.jpg"
       },
@@ -103,7 +103,7 @@
       "type": "Feature",
 	  "id": 8,
       "properties": {
-        "id": "pyramide-gizeh",
+        "name": "pyramide-gizeh",
         "title": "Giza pyramids",
         "img": "img/pyramide-gizeh.jpg"
       },
@@ -117,7 +117,7 @@
       "type": "Feature",
 	  "id": 9,
       "properties": {
-        "id": "taj-mahal",
+        "name": "taj-mahal",
         "title": "Taj Mahal",
         "img": "img/taj-mahal.jpg"
       },
@@ -131,7 +131,7 @@
       "type": "Feature",
 	  "id": 10,
       "properties": {
-        "id": "tour-eiffel",
+        "name": "tour-eiffel",
         "title": "Eiffel Tower",
         "img": "img/tour-eiffel.jpg"
       },
