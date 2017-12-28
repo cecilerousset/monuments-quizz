@@ -1,9 +1,3 @@
-// The intern JSON data
-var json = [
-	{"id":1,"title":"Angkor Wat", "latitude":"13.412500", "longitude":"103.866667"},
-	{"id":2,"title":"Taj-Mahal", "latitude":"27.175", "longitude":"78.041944"}
-];
-
 var map;
 var monumentsName = document.querySelector("#title").innerHTML;
 
@@ -13,22 +7,16 @@ function initMap() {
 		center: {lat: 0.785020, lng: 0.274128}
 	});
 		map.data.loadGeoJson('https://raw.githubusercontent.com/cecilerousset/monuments-quizz/map/monuments.geo.json');
-	
-	map.data.setStyle(function(feature) {
-    	return {
-			icon:feature.getProperty('icon')
-		};
-  });
 	  
+	
   google.maps.event.addListener(map.data,'addfeature',function(e){
-          
+         
+	  
 	  	var circleCenter = new google.maps.LatLng();
           circleCenter = e.feature.getGeometry().get();
-	  	  console.log(e.feature.getProperty("title"));
-
-
-	  	  //if(e.feature.getProperty("title")== monumentsName){
-			  var zone1 = new google.maps.Circle({
+	 
+	  if(monumentsName == e.feature.getProperty('title')){
+		  var zone1 = new google.maps.Circle({
 			map: map,
             strokeWeight: 0,
             fillOpacity: 0,
@@ -44,8 +32,8 @@ function initMap() {
 		});
 		var zone3 = new google.maps.Circle({
 			map: map,
-            strokeWeight: 1,
-            fillOpacity: 5,
+            strokeWeight: 0,
+            fillOpacity: 0,
 			center: circleCenter,
 			radius: 300000,
 		});
@@ -58,20 +46,36 @@ function initMap() {
 		zone3.addListener('click', function(event) {
 			alert("Bravo, c'est ça !")
 		})
-		 //}
- 
-  });
+	  }
+	  
+ 	/*e.feature.getGeometry().forEach(function(path){
+          
+             path.forEach(function(latLng){
+				 console.log("Je suis là");
+			 })
+          
+          });*/
+	  
+	  	  //if(e.feature.getProperty("title")== monumentsName){
+
+
    
+})
+
 }
       
 
         
 	//for(var i = 1; i < json.length; i++) 
 	//var obj = json[7];
-	
+/* 
+
+1°) foreach marker si title == name alors on affiche tout le bordel
+http://jsfiddle.net/doktormolle/qtDR6/
+2°) enlever ces putains de markers, opacity ou icon
+
 /*
-Webdesign map
-GeoJson countries : https://github.com/johan/world.geo.json/tree/master/countries
+
 Data event layer : https://developers.google.com/maps/documentation/javascript/examples/layer-data-event
 
 */
