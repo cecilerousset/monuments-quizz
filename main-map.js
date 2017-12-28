@@ -7,8 +7,12 @@ function initMap() {
 		center: {lat: 0.785020, lng: 0.274128}
 	});
 		
-	
+	//google.maps.Marker.getVisible(false);
 	map.data.loadGeoJson('https://raw.githubusercontent.com/cecilerousset/monuments-quizz/map/monuments.geo.json');
+	
+	map.data.setStyle(function(feature) {
+    return {icon:'./marker-null.png'};
+  });
 	  
 	google.maps.event.addListener(map.data,'addfeature',function(e) {
          
@@ -43,7 +47,7 @@ function initMap() {
 			var zone4 = new google.maps.Circle({
 				map: map,
             	strokeWeight: 0,
-            	fillOpacity: 0.1,
+            	fillOpacity: 0,
 				center: circleCenter,
 				radius: 250000,
 			});
