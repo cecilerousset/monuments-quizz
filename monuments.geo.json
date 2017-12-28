@@ -3,6 +3,7 @@
   "features": [
     {
       "type": "Feature",
+	  "id": 1,
       "properties": {
         "id": "angkor",
         "title": "Angkor Wat",
@@ -16,6 +17,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 2,
       "properties": {
         "id": "big-ben",
         "title": "Big Ben",
@@ -29,6 +31,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 3,
       "properties": {
         "id": "colisee",
         "title": "Colosseum",
@@ -42,6 +45,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 4,
       "properties": {
         "id": "empire-state-building",
         "title": "Empire State Building",
@@ -55,6 +59,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 5,
       "properties": {
         "id": "muraille",
         "title": "Great Wall of China",
@@ -68,6 +73,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 6,
       "properties": {
         "id": "machu-pichu",
         "title": "Machu Picchu",
@@ -81,6 +87,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 7,
       "properties": {
         "id": "opera-sydney",
         "title": "Sydney Opera House",
@@ -94,6 +101,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 8,
       "properties": {
         "id": "pyramide-gizeh",
         "title": "Giza pyramids",
@@ -107,6 +115,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 9,
       "properties": {
         "id": "taj-mahal",
         "title": "Taj Mahal",
@@ -120,6 +129,7 @@
 	  
 	{
       "type": "Feature",
+	  "id": 10,
       "properties": {
         "id": "tour-eiffel",
         "title": "Eiffel Tower",
