@@ -76,3 +76,8 @@ if (randomnumber4 == 3){
 console.log(randomnumber4);
 console.log(question)
 
+
+//-------------------------NOM--------------------------
+
+document.querySelector('#name').innerHTML = question;
+
