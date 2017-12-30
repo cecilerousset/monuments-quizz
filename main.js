@@ -69,15 +69,41 @@ if (randomnumber4 == 3){
     question = JSONtitle[randomnumber3];
 }
 
-//var test1 = document.querySelector('.h2 .picture0');
-//test1.src = img1;
 
+console.log(randomnumber1);
+console.log(randomnumber2);
+console.log(randomnumber3);
 
 console.log(randomnumber4);
+
 console.log(question)
 
 
-//-------------------------NOM--------------------------
+//-----------------------QUESTION---------------------------
 
 document.querySelector('#name').innerHTML = question;
 
+//-----------------------CLIQUER----------------------------
+var modal = document.querySelector('.modal-content');
+var num1 = document.querySelector('.picture0');
+var num2 = document.querySelector('.picture1');
+var num3 = document.querySelector('.picture2');
+
+
+num1.addEventListener('click', function(e){
+    if(randomnumber4 == 1){
+	    modal.classList.add("modal-content-visible");
+    };
+});
+
+num2.addEventListener('click', function(e){
+    if(randomnumber4 == 2){
+        modal.classList.add("modal-content-visible");
+    };
+});
+
+num3.addEventListener('click', function(e){
+    if(randomnumber4 == 3){
+        modal.classList.add("modal-content-visible");
+    };
+});
