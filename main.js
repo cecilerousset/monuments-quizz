@@ -45,14 +45,14 @@ test1.src = img3;
 var JSONtitle = {
     "0" : "Angkor",
     "1" : "Big Ben",
-    "2" : "Colisée",
-    "3" : "Empire State Building",
-    "4" : "Grande Muraille",
+    "2" : "The Coliseum",
+    "3" : "The Empire State Building",
+    "4" : "The Great Wall of China",
     "5" : "Machu Picchu",
-    "6" : "Opera Sydney",
-    "7" : "Pyramide Gizeh",
+    "6" : "The Sydney Opera",
+    "7" : "The Egyptian pyramids",
     "8" : "Taj Mahal",
-    "9" : "Tour Eiffel",
+    "9" : "The Eiffel Tower",
 };
 
 var randomnumber4 = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
@@ -69,16 +69,6 @@ if (randomnumber4 == 3){
     question = JSONtitle[randomnumber3];
 }
 
-
-console.log(randomnumber1);
-console.log(randomnumber2);
-console.log(randomnumber3);
-
-console.log(randomnumber4);
-
-console.log(question)
-
-
 //-----------------------QUESTION---------------------------
 
 document.querySelector('#name').innerHTML = question;
@@ -93,7 +83,7 @@ var num3 = document.querySelector('.picture2');
 num1.addEventListener('click', function(e){
     if(randomnumber4 == 1){
 	    modal.classList.add("modal-content-visible");
-    };
+    }
 });
 
 num2.addEventListener('click', function(e){
@@ -107,3 +97,27 @@ num3.addEventListener('click', function(e){
         modal.classList.add("modal-content-visible");
     };
 });
+
+//---------------------BOUTON----------------------
+var bouton = document.querySelector('#inputSubmit');
+var display = document.querySelector('.modal-content2');
+
+bouton.addEventListener('click', function(e){
+    e.preventDefault();
+    display.classList.add("modal-content-invisible");
+});
+
+//----------------------ENTER NAME--------------------------
+var playerName = document.querySelector('.player');
+var input = document.querySelector('#inputName');
+
+function write(e) {
+    if (e.target.value == "") {
+        playerName.innerHTML = "Default";
+    }
+    else {
+        playerName.innerHTML = e.target.value;
+    }
+}
+
+input.addEventListener('keyup', write);
