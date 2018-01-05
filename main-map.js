@@ -1,10 +1,12 @@
 var map;
-var monumentsName = document.querySelector("#title").innerHTML;
+var monumentsName = document.querySelector("#monument").innerHTML;
+var monumentsPicture = document.querySelector("#monument-picture");
+var comments = document.querySelector("#comments");
 
 function initMap() {
 	map = new google.maps.Map(document.querySelector('#map'), {
-		zoom: 2,
-		center: {lat: 0.785020, lng: 0.274128}
+		zoom: 3,
+		center: {lat: 48.932091, lng:  2.087123}
 	});
 		
 	//google.maps.Marker.getVisible(false);
@@ -18,8 +20,12 @@ function initMap() {
          
 		var circleCenter = new google.maps.LatLng();
 		circleCenter = e.feature.getGeometry().get();
+		//monumentsPicture.src = e.feature.getProperty('img');
+		
+		//console.log(e.feature.getProperty('img'));
 		
 		if(monumentsName == e.feature.getProperty('title')){
+			monumentsPicture.src = e.feature.getProperty('img');
 			var zone1 = new google.maps.Circle({
 				map: map,
             	strokeWeight: 0,
@@ -53,26 +59,17 @@ function initMap() {
 			});
 			
 			zone1.addListener('click', function(event) {
-				alert("Tu en es très loin... désolé...");
+				comments.innerHTML = "You're far far away... sorry...";
 			});
 			zone2.addListener('click', function(event) {
-				alert("Tu es peut-être sur le bon continent, ou c'est celui d'à côté !");
+				comments.innerHTML = "You're maybe on the correct continent or... it's the next one !";
         	});
 			zone3.addListener('click', function(event) {
-				alert("C'est presque ça !");
+				comments.innerHTML = "You're almost there !";
         	});
 			zone4.addListener('click', function(event) {
-				alert("Bravo, c'est ça !")
+				comments.innerHTML = "CONGRATULATIONS, you're right !"
 			});
 		}
 	})
 }
-
-/* 
-enlever markers, opacity ou icon
-ou trouver un moyen de ne pas les faire apparaitre automatiquement
-
-Data event layer : https://developers.google.com/maps/documentation/javascript/examples/layer-data-event
-
-*/
-	  
