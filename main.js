@@ -95,7 +95,7 @@ num3.addEventListener('click', function(e){
     };
 });
 
-//------------------------BOUTON----------------------
+//---------------------BOUTON----------------------
 var bouton = document.querySelector('#inputSubmit');
 var display = document.querySelector('.modal-content2');
 
