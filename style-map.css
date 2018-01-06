@@ -1,96 +1,71 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
-html, body,.inner {
+html, body, h1, h2, h3, #map, #info-box .inner {
 	height: 100%;
     margin: 0;
     padding: 0;
 	font-family: 'Roboto', sans-serif;;
 }
 
-#map {
-	height: 100%;
-}
-
 #info-box {
 	display:flex;
 	flex-direction: column;
-	width: 500px;
+	width: 30em;
 	height: 100%;
-	min-height: 160px;
 	position: absolute;
 	float: left;
-	bottom: 0px;
-	padding 20px 0;
 	background-color: white;
 	box-shadow: 5px 0px 8px #888888;
+	bottom: 0em;
 }
 
-#data {
-	display: block;
-	position: absolute;
-	width: 452px;
+#monument-picture{
+	height: 17em;
+}
+
+.data{
 	padding: 20px 24px 20px 24px;
-	top : 275px;
-	margin: 0 auto;
+}
+
+#data-title{
 	background-color: #4285F4;
-}
-
-#data h1, h3, p{
-	width: 100%;
-	padding: 0 0px;
-	margin: 0;
 	color: white;
-	font-family: "Roboto";
 }
 
-#data h1{
-	font-weight:400;
-	font-size: 24px;
+#data-title h1{
 	line-height: 40px;
-	height: 100%;
-	width: 408px;
+	font-size: 24px;
+	font-weight: 400;
 }
 
-#data p, h3{
-	margin-top: 10px;
-	margin-bottom: 1px; 
-	font-weight:300;
+#data-title h3{
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 20px;
+	margin-top: 10px;
 }
 
 p{
-	position: absolute;
-	top: 400px;
 	line-height: 25px;
 	color: black;
-	padding: 20px 24px 20px 24px;
-	width: 452px;
+	display: inline-block;
 }
 
-#comments{
-	top:468px;
-	margin-left: 50px;
+#text-comments{
 	font-weight: 500;
+	margin: 0 auto;
+	top:5em;
+	vertical-align: middle;
 }
 
-img{
-	width: 500px;
-}
-
-#jauge{
-	position: absolute;
-	top:525px;
-	left:-45px;
-}
-
-#commment-icon{
-	display: absolute;
-	margin-left:24px;
-	margin-top:213px;
+#commment img{
+	margin-right: 1em;
+	display: inline-block;
 	width:6%;
+	vertical-align: middle;
 }
 
-#footer{
-	margin-top: 269px;
+#gauge{
+	width: 17em;
+	margin: 3em 0 0 2.7em;
 }

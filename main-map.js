@@ -1,8 +1,8 @@
 var map;
 var monumentsName = document.querySelector("#monument").innerHTML;
 var monumentsPicture = document.querySelector("#monument-picture");
-var comments = document.querySelector("#comments");
-var jauge = document.querySelector("#jauge");
+var comments = document.querySelector("#text-comments");
+var gauge = document.querySelector("#gauge");
 
 function initMap() {
 	map = new google.maps.Map(document.querySelector('#map'), {
@@ -10,7 +10,6 @@ function initMap() {
 		center: {lat: 48.932091, lng:  2.087123}
 	});
 		
-	//google.maps.Marker.getVisible(false);
 	map.data.loadGeoJson('https://raw.githubusercontent.com/cecilerousset/monuments-quizz/map/monuments.geo.json');
 	
 	map.data.setStyle(function(feature) {
@@ -21,10 +20,7 @@ function initMap() {
          
 		var circleCenter = new google.maps.LatLng();
 		circleCenter = e.feature.getGeometry().get();
-		//monumentsPicture.src = e.feature.getProperty('img');
-		
-		//console.log(e.feature.getProperty('img'));
-		
+	
 		if(monumentsName == e.feature.getProperty('title')){
 			monumentsPicture.src = e.feature.getProperty('img');
 			var zone1 = new google.maps.Circle({
@@ -61,19 +57,19 @@ function initMap() {
 			
 			zone1.addListener('click', function(event) {
 				comments.innerHTML = "You're far far away...";
-				jauge.src = "img/location-pointer1.svg";
+				gauge.src = "img/pointer/location-pointer1.svg";
 			});
 			zone2.addListener('click', function(event) {
 				comments.innerHTML = "You're on the correct continent or it's the next one !";
-				jauge.src = "img/location-pointer2.svg";
+				gauge.src = "img/pointer/location-pointer2.svg";
         	});
 			zone3.addListener('click', function(event) {
 				comments.innerHTML = "You're almost there !";
-				jauge.src = "img/location-pointer3.svg";
+				gauge.src = "img/pointer/location-pointer3.svg";
         	});
 			zone4.addListener('click', function(event) {
 				comments.innerHTML = "Congratulations, you're right !"
-				jauge.src = "img/location-pointer4.svg";
+				gauge.src = "img/pointer/location-pointer4.svg";
 			});
 		}
 	})
