@@ -17,29 +17,6 @@ var JSONdata = {
     "9" : "img/tour-eiffel.jpg",
 };
 
-var JSONdata = {
-	"0" : "img/angkor-vat1.jpg",
-    "1" : "img/big-ben.jpg",
-    "2" : "img/colisée-rome.jpg",
-    "3" : "img/empire-state-building.jpg",
-    "4" : "img/grande-muraille-chine.jpg",
-    "5" : "img/Machu-Picchu.jpg",
-    "6" : "img/opera-sydney.jpg",
-    "7" : "img/pyramide-gizeh.jpg",
-    "8" : "img/taj-mahal.jpg",
-    "9" : "img/tour-eiffel.jpg",
-    "10" : "Angkor",
-    "11" : "Big Ben",
-    "12" : "The Coliseum",
-    "13" : "The Empire State Building",
-    "14" : "The Great Wall of China",
-    "15" : "Machu Picchu",
-    "16" : "The Sydney Opera",
-    "17" : "The Egyptian pyramids",
-    "18" : "Taj Mahal",
-    "19" : "The Eiffel Tower",
-};
-
 //-----------------AVOIR MONUMENTS DIFFERENTS---------------
 while(randomnumber2==randomnumber1){
     randomnumber2 = Math.floor(Math.random() * (9 - 0 + 1)) + 0;
