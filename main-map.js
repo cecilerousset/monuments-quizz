@@ -1,5 +1,8 @@
 var map;
-var monumentsName = document.querySelector("#monument").innerHTML;
+var getDataName = location.search.substring(1, location.search.length);
+var dataName = getDataName.replace("%20", " ");
+var monumentsName = document.querySelector("#monument");
+monumentsName.innerHTML = dataName;
 var monumentsPicture = document.querySelector("#monument-picture");
 var comments = document.querySelector("#text-comments");
 var gauge = document.querySelector("#gauge");
@@ -21,7 +24,7 @@ function initMap() {
 		var circleCenter = new google.maps.LatLng();
 		circleCenter = e.feature.getGeometry().get();
 	
-		if(monumentsName == e.feature.getProperty('title')){
+		if(monumentsName.innerHTML == e.feature.getProperty('title')){
 			monumentsPicture.src = e.feature.getProperty('img');
 			var zone1 = new google.maps.Circle({
 				map: map,
