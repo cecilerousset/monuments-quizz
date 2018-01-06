@@ -1,6 +1,3 @@
-//<body onLoad="js_function_1()>
-
-
 //-------------NOMBRES ALEATOIRES POUR IMAGES--------------
 var randomnumber1 = Math.floor(Math.random() * (9 - 0 + 1)) + 0;
 var randomnumber2 = Math.floor(Math.random() * (9 - 0 + 1)) + 0;
@@ -18,6 +15,29 @@ var JSONdata = {
     "7" : "img/pyramide-gizeh.jpg",
     "8" : "img/taj-mahal.jpg",
     "9" : "img/tour-eiffel.jpg",
+};
+
+var JSONdata = {
+	"0" : "img/angkor-vat1.jpg",
+    "1" : "img/big-ben.jpg",
+    "2" : "img/colisée-rome.jpg",
+    "3" : "img/empire-state-building.jpg",
+    "4" : "img/grande-muraille-chine.jpg",
+    "5" : "img/Machu-Picchu.jpg",
+    "6" : "img/opera-sydney.jpg",
+    "7" : "img/pyramide-gizeh.jpg",
+    "8" : "img/taj-mahal.jpg",
+    "9" : "img/tour-eiffel.jpg",
+    "10" : "Angkor",
+    "11" : "Big Ben",
+    "12" : "The Coliseum",
+    "13" : "The Empire State Building",
+    "14" : "The Great Wall of China",
+    "15" : "Machu Picchu",
+    "16" : "The Sydney Opera",
+    "17" : "The Egyptian pyramids",
+    "18" : "Taj Mahal",
+    "19" : "The Eiffel Tower",
 };
 
 //-----------------AVOIR MONUMENTS DIFFERENTS---------------
@@ -43,16 +63,16 @@ test1.src = img3;
 
 //------------------------TITRE-----------------------------
 var JSONtitle = {
-    "0" : "Angkor",
+    "0" : "Angkor Wat",
     "1" : "Big Ben",
-    "2" : "The Coliseum",
-    "3" : "The Empire State Building",
-    "4" : "The Great Wall of China",
+    "2" : "Colosseum",
+    "3" : "Empire State Building",
+    "4" : "Great Wall of China",
     "5" : "Machu Picchu",
-    "6" : "The Sydney Opera",
-    "7" : "The Egyptian pyramids",
+    "6" : "Sydney Opera House",
+    "7" : "Giza pyramids",
     "8" : "Taj Mahal",
-    "9" : "The Eiffel Tower",
+    "9" : "Eiffel Tower",
 };
 
 var randomnumber4 = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
@@ -98,7 +118,7 @@ num3.addEventListener('click', function(e){
     };
 });
 
-//---------------------BOUTON----------------------
+//------------------------BOUTON----------------------
 var bouton = document.querySelector('#inputSubmit');
 var display = document.querySelector('.modal-content2');
 
