@@ -69,3 +69,17 @@ p{
 	width: 17em;
 	margin: 3em 0 0 2.7em;
 }
+
+@media (max-width: 768px){
+	#info-box{
+		width: 18em;
+	}
+	#monument-picture{
+		height: 10em;
+	}
+	#gauge{
+		margin-left: 0em; 
+		width: 14em;
+	}
+}
+}

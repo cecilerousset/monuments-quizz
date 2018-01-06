@@ -70,6 +70,9 @@ function initMap() {
 			zone4.addListener('click', function(event) {
 				comments.innerHTML = "Congratulations, you're right !"
 				gauge.src = "img/pointer/location-pointer4.svg";
+				map.setOptions({
+					
+				});
 			});
 		}
 	})
