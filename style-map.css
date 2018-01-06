@@ -1,36 +1,10 @@
-@font-face {
-	font-family: 'Bebas Regular'; 
-	src: url('fonts/bebas-regular.otf'); 
-	font-weight: normal; 
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Bebas Book'; 
-	src: url('fonts/bebas-book.otf'); 
-	font-weight: normal; 
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Helvetica Bold';
-	font-style: normal;
-	font-weight: normal;
-	src: url('fonts/helvetica-bold.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Helvetica Bold';
-	font-style: normal;
-	font-weight: normal;
-	src: url('fonts/helvetica.otf') format('otf');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 html, body,.inner {
 	height: 100%;
     margin: 0;
     padding: 0;
-	font-family: "Bebas Book";
+	font-family: 'Roboto', sans-serif;;
 }
 
 #map {
@@ -38,50 +12,85 @@ html, body,.inner {
 }
 
 #info-box {
-	width: 265px;
-	height: 500px;
+	display:flex;
+	flex-direction: column;
+	width: 500px;
+	height: 100%;
 	min-height: 160px;
-	
 	position: absolute;
 	float: left;
-	
-	left: 30px;
-	bottom: 30px;
-	
-	margin-top: 20px;
-	margin-bottom: 75px;
+	bottom: 0px;
 	padding 20px 0;
-	
-	background: url("img/bg-map-container.jpg");
-	border: 10px solid #22354f;
-	border-radius: 12px;
+	background-color: white;
+	box-shadow: 5px 0px 8px #888888;
 }
 
 #data {
 	display: block;
 	position: absolute;
-	top: 20px;
-	width: 235px;
-	padding: 0 15px;
+	width: 452px;
+	padding: 20px 24px 20px 24px;
+	top : 275px;
+	margin: 0 auto;
+	background-color: #4285F4;
 }
 
-#data h3{
-	color: #d84500;
-	font-size: 35px;
-	line-height: 33px;
-	margin: 0 auto 20px auto;
-	text-align: center;
+#data h1, h3, p{
+	width: 100%;
+	padding: 0 0px;
+	margin: 0;
+	color: white;
+	font-family: "Roboto";
 }
 
-#data p{
-	width: 235px;
+#data h1{
+	font-weight:400;
+	font-size: 24px;
+	line-height: 40px;
+	height: 100%;
+	width: 408px;
+}
+
+#data p, h3{
+	margin-top: 10px;
+	margin-bottom: 1px; 
+	font-weight:300;
 	font-size: 15px;
+	line-height: 20px;
+}
+
+p{
+	position: absolute;
+	top: 400px;
 	line-height: 25px;
-	color: #3b3b3b;
-	font-family: "Helvetica";
-	text-align: center;
+	color: black;
+	padding: 20px 24px 20px 24px;
+	width: 452px;
+}
+
+#comments{
+	top:468px;
+	margin-left: 50px;
+	font-weight: 500;
 }
 
 img{
-	width: 100%;
+	width: 500px;
+}
+
+#jauge{
+	position: absolute;
+	top:525px;
+	left:-45px;
+}
+
+#commment-icon{
+	display: absolute;
+	margin-left:24px;
+	margin-top:213px;
+	width:6%;
+}
+
+#footer{
+	margin-top: 269px;
 }

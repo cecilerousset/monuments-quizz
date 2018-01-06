@@ -2,6 +2,7 @@ var map;
 var monumentsName = document.querySelector("#monument").innerHTML;
 var monumentsPicture = document.querySelector("#monument-picture");
 var comments = document.querySelector("#comments");
+var jauge = document.querySelector("#jauge");
 
 function initMap() {
 	map = new google.maps.Map(document.querySelector('#map'), {
@@ -59,16 +60,20 @@ function initMap() {
 			});
 			
 			zone1.addListener('click', function(event) {
-				comments.innerHTML = "You're far far away... sorry...";
+				comments.innerHTML = "You're far far away...";
+				jauge.src = "img/location-pointer1.svg";
 			});
 			zone2.addListener('click', function(event) {
-				comments.innerHTML = "You're maybe on the correct continent or... it's the next one !";
+				comments.innerHTML = "You're on the correct continent or it's the next one !";
+				jauge.src = "img/location-pointer2.svg";
         	});
 			zone3.addListener('click', function(event) {
 				comments.innerHTML = "You're almost there !";
+				jauge.src = "img/location-pointer3.svg";
         	});
 			zone4.addListener('click', function(event) {
-				comments.innerHTML = "CONGRATULATIONS, you're right !"
+				comments.innerHTML = "Congratulations, you're right !"
+				jauge.src = "img/location-pointer4.svg";
 			});
 		}
 	})
