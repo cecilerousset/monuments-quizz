@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
     <head>
-        <title>Projet WEB</title>
+        <meta charset="UTF-8"/>
+        <title>Monument Quizz</title>
         <link href="style.css" rel="stylesheet"/>
     </head>
     <body>
@@ -11,16 +12,27 @@
             	<div class="modal-content bold">
 					<div>
                 		<h3>Congratulations !</h3>
-                			<img class="valide-modal" alt="valide" src="img/valide.jpg"/>
-                			<p>Now, time to place it !</p>
+                			<img class="valide-modal" alt="valide" src="img/valide%20-%20Copie.jpg"/>
+                			<input class="bold" type="submit" value="Time to place it" onclick="document.location='map.html' + '?' + question">
 					</div>
             	</div>
-                
+        <div id="wrapper2">
+            <div id="computed2">
+            	<div class="modal-content2 bold">
+					<div>
+                		<h5>WELCOME</h5>
+                        <ul class="bold">Name : <input id="inputName" name="text" type="text" value=""/> </ul>
+                        <input id="inputSubmit" class="bold" type="submit" value="Start the game">
+					</div>
+            	</div>
+        <h2 id="question"> Click on </h2>
+        <h4 id="name">Default</h4>
         <div id="monuments">
-            <img class="picture" src="img/big-ben.jpg"/>
-            <img class="picture" src="img/Machu-Picchu.jpg"/>
-            <img class="picture" src="img/opera-sydney.jpg"/>
+            <img class="picture0" src="img/big-ben.jpg"/>
+            <img class="picture1" src="img/Machu-Picchu.jpg"/>
+            <img class="picture2" src="img/opera-sydney.jpg"/>
         </div>
+        <h6 class="player" id="player">Default</h6>
         <script src="main.js"></script>
     </body>
 </html>

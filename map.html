@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Maps</title>
-    <link href="style-map.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDogFkqIzvPTA4YwKz3AbJjeUPvgbfVSoA&callback=initMap">
-    </script>
-    <script src="main-map.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Maps</title>
+		<link href="style-map.css" rel="stylesheet"/>
+	</head>
+	<body>
+    	<div id="map"></div>
+		<div id="info-box">
+			<img id="monument-picture" src="">
+			<div class="data" id="data-title">
+				<h1 id="monument"></h1>
+				<h3>Find it on the map</h3>
+			</div>
+			<div class="data">
+				<p>Click on the map to find the indicated monument. The gauge and the comments indicate you if you're near or far away.</p>
+				<div id="commment">
+					<img src="img/comment.svg"/>
+					<p id="text-comments">Click on the map</p>
+				</div>
+				<img id="gauge" src="img/pointer/location-pointer1.svg"/>
+			</div>
+		</div>
+    	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDogFkqIzvPTA4YwKz3AbJjeUPvgbfVSoA&callback=initMap">
+		</script>
+    	<script src="main-map.js"></script>
+	</body>
 </html>

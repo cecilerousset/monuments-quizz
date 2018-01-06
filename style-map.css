@@ -1,9 +1,85 @@
-html, body {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+html, body, h1, h2, h3, #map, #info-box .inner {
+	height: 100%;
     margin: 0;
     padding: 0;
+	font-family: 'Roboto', sans-serif;;
 }
 
-#map {
-    height: 100%;
+#info-box {
+	display:flex;
+	flex-direction: column;
+	width: 30em;
+	height: 100%;
+	position: absolute;
+	float: left;
+	background-color: white;
+	box-shadow: 5px 0px 8px #888888;
+	bottom: 0em;
+}
+
+#monument-picture{
+	height: 17em;
+}
+
+.data{
+	padding: 20px 24px 20px 24px;
+}
+
+#data-title{
+	background-color: #4285F4;
+	color: white;
+}
+
+#data-title h1{
+	line-height: 40px;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+#data-title h3{
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	margin-top: 10px;
+}
+
+p{
+	line-height: 25px;
+	color: black;
+	display: inline-block;
+}
+
+#text-comments{
+	font-weight: 500;
+	margin: 0 auto;
+	top:5em;
+	vertical-align: middle;
+}
+
+#commment img{
+	margin-right: 1em;
+	display: inline-block;
+	width:6%;
+	vertical-align: middle;
+}
+
+#gauge{
+	width: 17em;
+	margin: 3em 0 0 2.7em;
+}
+
+@media (max-width: 768px){
+	#info-box{
+		width: 18em;
+	}
+	#monument-picture{
+		height: 10em;
+	}
+	#gauge{
+		margin-left: 0em; 
+		width: 14em;
+	}
+}
 }
